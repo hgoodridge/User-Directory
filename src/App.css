@@ -1,0 +1,12 @@
+.bluediv{
+  background-color: rgb(2, 64, 116);
+  padding-bottom: 10%;
+}
+
+.textmiddle{
+  justify-content: center;
+}
+
+.search{
+  border-radius:2px;
+}
