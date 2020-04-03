@@ -1,19 +1,26 @@
 import React from 'react';
 import API from './utils/API';
 import './App.css';
+import EmployeeCard from "./components/EmployeeCard"
+import EmployeeWrap from "./components/EmployeeWrap"
 
-class App extends React.Component{
+class App extends React.Component {
   state = {
-    employees:[]
+    employees: []
   }
 
-  componentDidMount(){
+  componentDidMount() {
     API.getEmployees(10)
-    .then(res =>this.setState({employees:res.data.results}))
-    .catch(err => console.log(err))
+      .then(res => {
+        this.setState({ employees: res.data.results })
+        console.log(this.state.employees[0].dob.date)
+        console.log(Date())
+        
+      })
+      .catch(err => console.log(err))
   }
 
-  render(){
+  render() {
     return (
       <div>
         <div className="bluediv text-white ">
@@ -26,9 +33,24 @@ class App extends React.Component{
         </div>
         <div className="d-flex justify-content-center mt-3">
           <form >
-            <input className="search"placeholder="Search for employees!">
+            <input className="search" placeholder="Search for employees!">
             </input>
           </form>
+        </div>
+        <div className ="mt-4">
+          <EmployeeWrap>
+          {this.state.employees.map(employee =>(
+            
+            <EmployeeCard
+            image={employee.picture.thumbnail}
+            name={`${employee.name.first} ${employee.name.last}`}
+            phone={employee.phone}
+            email={employee.email}
+            dob={employee.dob.date}
+            
+            />
+            ))}
+            </EmployeeWrap>
         </div>
       </div>
     );

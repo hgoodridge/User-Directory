@@ -1,5 +1,5 @@
 import React, { Component } from "react";
 
-class Search extends Component{
+class SearchForm extends Component{
     
 }
