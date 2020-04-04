@@ -1,7 +1,7 @@
 import React from "react"
 
 
-function employeeCard(props) {
+function EmployeeCard(props) {
     return ( 
   
    <tbody>
@@ -15,4 +15,4 @@ function employeeCard(props) {
      </tbody>
     )
 }
-export default employeeCard
+export default EmployeeCard
