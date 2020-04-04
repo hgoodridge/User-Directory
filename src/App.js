@@ -13,8 +13,8 @@ class App extends React.Component {
     API.getEmployees(10)
       .then(res => {
         this.setState({ employees: res.data.results })
-        console.log(this.state.employees[0].dob.date)
-        console.log(Date())
+        // console.log(this.state.employees[0].dob.date)
+        // console.log(Date())
         
       })
       .catch(err => console.log(err))
