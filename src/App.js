@@ -7,7 +7,7 @@ import EmployeeWrap from './components/EmployeeWrap/'
 class App extends React.Component {
   state = {
     employees: []
-  }
+  } 
 
   componentDidMount() {
     API.getEmployees(10)
