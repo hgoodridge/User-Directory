@@ -13,9 +13,15 @@ class App extends React.Component {
     API.getEmployees(10)
       .then(res => {
         this.setState({ employees: res.data.results })
-        // console.log(this.state.employees[0].dob.date)
-        // console.log(Date())
+        // var firstName = this.state.employees[0].name
         
+      //  const soter = this.state.employees.sort(function(a,b){
+      //     return a.name.first - b.name.first
+      //     return firstName
+      //   })
+      //   console.log(firstName)
+      //   console.log(this.state.employees)
+      //   // console.log(Date())
       })
       .catch(err => console.log(err))
   }
@@ -42,6 +48,7 @@ class App extends React.Component {
           {this.state.employees.map(employee =>(
             
             <EmployeeCard
+            key={employee.phone}
             image={employee.picture.thumbnail}
             name={`${employee.name.first} ${employee.name.last}`}
             phone={employee.phone}

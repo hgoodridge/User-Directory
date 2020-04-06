@@ -5,7 +5,7 @@ import React from "react"
 function EmployeeWrap(props) {
     return (
 
-        <table class="table table-hover">
+        <table className="table table-hover">
             <thead>
                 <tr>
                     <th scope="col">Image</th>
