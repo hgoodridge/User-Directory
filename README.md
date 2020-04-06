@@ -9,5 +9,5 @@ and allows the user to filter/sort through that same list.
 [Deployed Link](https://blueberry-crisp-69411.herokuapp.com/)
 
 ## Images
-
+  
 ![working website](./images/website.JPG)
