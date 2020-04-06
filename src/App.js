@@ -1,8 +1,8 @@
 import React from 'react';
 import API from './utils/API';
 import './App.css';
-import EmployeeCard from './components/EmployeeCard/index'
-import EmployeeWrap from './components/EmployeeWrap/index'
+import EmployeeCard from 'components/EmployeeCard/index'
+import EmployeeWrap from 'components/EmployeeWrap/index'
 
 class App extends React.Component {
   state = {
