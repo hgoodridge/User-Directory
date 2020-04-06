@@ -1,8 +1,7 @@
 import React from "react"
-// import employeeCard from "./components/EmployeeCard"
 
 
-function EmployeeWrap(props) {
+function employeeWrap(props) {
     return (
 
         <table className="table table-hover">
@@ -21,4 +20,4 @@ function EmployeeWrap(props) {
           </table>
     )
 }
-export default EmployeeWrap
+export default employeeWrap
